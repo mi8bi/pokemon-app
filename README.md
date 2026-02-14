@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ポケモン図鑑アプリ
 
-## Getting Started
+Next.jsで作成したポケモン図鑑アプリです。
 
-First, run the development server:
+## 機能
+
+### レスポンシブデザイン
+- **PC**: 4カラムレイアウト
+- **タブレット**: 2-3カラムレイアウト
+- **スマートフォン**: 1カラムレイアウト
+- すべてのデバイスで快適に閲覧可能
+
+### 日本語対応
+- ポケモンの名前を日本語で表示
+- タイプを日本語で表示
+- アビリティを日本語で表示
+
+### 検索機能
+以下の3つの方法で検索できます：
+1. **名前で検索**: ポケモンの日本語名または英語名で検索
+2. **タイプで検索**: タイプの日本語名または英語名で検索
+3. **アビリティで検索**: アビリティの日本語名または英語名で検索
+
+第1世代のポケモン（全151匹）から検索可能です。
+
+### 使い方
+1. 検索タイプを選択（名前/タイプ/アビリティ）
+2. 検索ボックスに検索したい文字を入力
+3. 「検索」ボタンをクリックまたはEnterキーを押す
+4. 検索結果が表示されます
+
+検索をクリアするには「クリア」ボタンをクリックしてください。
+
+## 開発
+
+開発サーバーを起動:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+ブラウザで [http://localhost:3000](http://localhost:3000) を開いて確認できます。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 技術スタック
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Next.js 16.1.1
+- React 19.2.3
+- TypeScript
+- Tailwind CSS 4
+- PokeAPI
 
-## Learn More
+## 注意事項
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+日本語翻訳データは主に第1世代〜第8世代のポケモンに対応しています。
+翻訳データにないポケモンやタイプ、アビリティは英語名で表示されます。
